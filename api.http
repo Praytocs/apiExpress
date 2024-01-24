@@ -1,0 +1,26 @@
+GET http://localhost:3000/movies
+###
+GET http://localhost:3000/movies/6a360a18-c645-4b47-9a7b-2a71babbf3e0
+###
+GET http://localhost:3000/movies?genre=Biography
+###
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "The Godfather",
+  "year": 1975,
+  "director": "Francis Ford Coppola",
+  "duration": 175,
+  "poster": "https://example.com/godfather-poster.jpg",
+  "genre": ["Crime", "Drama"],
+  "rate": 8.5
+}
+
+###
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "year": 1998
+}
